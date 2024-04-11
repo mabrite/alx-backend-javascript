@@ -1,3 +1,12 @@
-[200~import initializeRooms from './1-make_classrooms.js';
+import ClassRoom from './0-classroom';
 
-console.log(initializeRooms());
+export default function initializeRooms() {
+  const rooms = [];
+  const order = [19, 20, 34];
+  let i = 0;
+  while (i < order.length) {
+    rooms.push(new ClassRoom(order[i]));
+    i += 1;
+  }
+  return rooms;
+}
